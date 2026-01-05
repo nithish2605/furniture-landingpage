@@ -72,20 +72,45 @@ a:hover{
 .mobile-navbar{
     width: 250px;
     padding:1rem;
-    min-height: 400px;
-    position: absolute;
+    height: 100vh;
+    position: fixed;
     top: 0;
     right: 0;
-    display: none;
+   
+    transform: translateX(110%);
+    transition: transform 0.35s ease-in-out;
+
+    z-index: 9999;
+   
 }
 .mobile-navbar.active{
-    display: block;
-    z-index:10;
+    transform: translateX(0);
 }
 
 .mob-nav-item{
-    margin:2rem 0rem;
+    margin:1.5rem 0rem;
 }
 
+.nav-backdrop{
+    position: fixed;
+    inset: 0;
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
 
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .3s ease;
 
+    z-index: 9999;
+}
+
+.nav-backdrop.active{
+    opacity: 1;
+    pointer-events: auto;
+}
+.img-inline-wrap{
+    display: inline-block;
+    border-radius: 300px;
+    overflow: hidden;
+    vertical-align: middle;
+}
