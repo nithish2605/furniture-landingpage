@@ -15,12 +15,16 @@
         rel="stylesheet">
     <!-- flat icons linking here -->
     <link href="https://cdn.jsdelivr.net/npm/@flaticon/flaticon-uicons@3.3.1/css/all/all.min.css" rel="stylesheet">
+    <!-- counter js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/counterup2/2.0.2/index.min.js"></script>
 </head>
 
 <body>
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-light text-grey pt-lg-5 pt-3">
-        <div class="container align-items-center">
+        <div class="container-md align-items-center">
             <a class="navbar-brand" href="index.html">
                 <img class="img-fluid" src="assets/images/logo.png" alt="brand-logo here">
             </a>
@@ -57,7 +61,7 @@
     <div class="nav-backdrop"></div>
 
     <!-- mobile navbar -->
-    <div class="mobile-navbar" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+    <div class="mobile-navbar">
         <ul class="mob-nav text-center p-0 gap-2">
             <li class="text-end close-btn d-flex align-items-center" style="cursor: pointer;">
                 <a class="navbar-brand" href="index.html">
@@ -83,14 +87,90 @@
         </ul>
     </div>
 
+
     <!-- hero section -->
-    <section class="hero-section mt-3">
-        <h1 class="text-center display-3 fw-bold">Transform
-            <span class="img-inline-wrap"> <img class="img-fluid" src="assets/images/chair.png" alt="chair-img">
-            </span>
-            Space with Sustaible Furniture
-        </h1>
+    <section class="hero-section container-md mt-3">
+        <div class="hero-content text-center">
+            <h1 class="fw-bold mb-5 display-4">Transform Space with Sustaible Furniture</h1>
+            <span class="default-btn hero-btn  px-4 py-3 ">Shop Now</span>
+        </div>
     </section>
+
+    <!-- Numbers section -->
+    <section class="container-md text-center  mt-5 pb-md-5 pt-sm-4">
+        <div class="row gap-3 gap-sm-0 justify-content-between">
+            <div class="col-sm-4 col-md-3 col-12">
+                <h1 class="display-3 fw-bold ">18K+</h1>
+                <p>Happy and loyal customers buy out products</p>
+            </div>
+            <div class="col-sm-4 col-md-3 col-12">
+                <h1 class="display-3 fw-bold ">700+</h1>
+                <p>products than we have created and sold on the market</p>
+            </div>
+            <div class="col-sm-4 col-md-3 col-12">
+                <h1 class="display-3 fw-bold ">95%</h1>
+                <p>customers who have purchased and next come back</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- products area here -->
+    <section class="products-section container-md my-5 pb-5">
+        <h1 class="fw-bold text-center my-5 display-3">Our Best Quality Products</h1>
+        <div class="row  g-5 g-sm-3">
+            <div class="col-lg-4 col-sm-6">
+                <div class="product-card p-sm-3 p-2">
+                    <div class="pro-img-box text-center">
+                        <img class="img-fluid" src="assets/images/sofa.png" alt="product-image">
+                    </div>
+                    <div class="pro-body d-flex flex-column gap-2 mb-3">
+                        <h5 class="m-0 fs-5">Easy Sofa</h5>
+                        <p class="m-0 fs-4">Price : ₹15000</p>
+                    </div>
+                    <div class="action-btns d-flex justify-content-between flex-column flex-xl-row gap-3">
+                        <button class="default-btn cart-btn text-center w-100">Add to cart</button>
+                        <button class="buy-now-btn  w-100">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="product-card p-sm-3 p-2">
+                    <div class="pro-img-box text-center">
+                        <img class="img-fluid" src="assets/images/sofa.png" alt="product-image">
+                    </div>
+                    <div class="pro-body d-flex flex-column gap-2 mb-3">
+                        <h5 class="m-0 fs-4">Easy Sofa</h5>
+                        <p class="m-0 fs-4">Price : ₹15000</p>
+                    </div>
+                    <div class="action-btns d-flex justify-content-between flex-column flex-xl-row gap-3">
+                        <button class="default-btn cart-btn text-center w-100">Add to cart</button>
+                        <button class="buy-now-btn  w-100">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="product-card p-sm-3 p-2">
+                    <div class="pro-img-box text-center">
+                        <img class="img-fluid" src="assets/images/sofa.png" alt="product-image">
+                    </div>
+                    <div class="pro-body d-flex flex-column gap-2 mb-3">
+                        <h5 class="m-0 fs-4">Easy Sofa</h5>
+                        <p class="m-0 fs-4">Price : ₹15000</p>
+                    </div>
+                    <div class="action-btns d-flex justify-content-between flex-column flex-xl-row gap-3">
+                        <button class="default-btn cart-btn text-center w-100">Add to cart</button>
+                        <button class="buy-now-btn  w-100">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- subscribe area -->
+     <section class="container text-center my-5">
+        <h1 class="display-4 fw-bold">Subscribe to our newsletter and grab <span class="fw-bolder">30% OFF</span></h1>
+     </section>
 
 
     <!-- bs5 js here -->
