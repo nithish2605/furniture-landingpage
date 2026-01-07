@@ -134,11 +134,10 @@ button{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-      display: flex;
+    display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 2rem;
-
+    border-radius: 1rem;
 }
 
 .hero-content{
@@ -154,7 +153,6 @@ button{
     cursor: pointer;
     padding: 1rem 1.5rem;
     font-weight: 800;
-
 }
 
 .buy-now-btn{
@@ -170,3 +168,12 @@ button{
     border-radius: 2rem;
 }
 
+.subscribe-area{
+  max-width: 800px;
+}
+
+input{
+    border: 1px solid black !important;
+    border-radius: 8rem;
+
+}
