@@ -88,7 +88,7 @@
     <section class="hero-section container-md mt-3">
         <div class="hero-content text-center">
             <h1 class="fw-bold mb-5 display-4">Transform Space with Sustaible Furniture</h1>
-            <span class="default-btn hero-btn  px-4 py-3 ">Shop Now</span>
+            <button class="default-btn hero-btn  px-4 py-3 ">Shop Now</button>
         </div>
     </section>
 
@@ -114,54 +114,57 @@
     <!-- products area here -->
     <section class="products-section container-md my-5 pb-sm-5">
         <h1 class="fw-bold text-center my-5 display-3">Our Best Quality Products</h1>
-        <div class="row  g-4">
-            <div class="col-lg-4 col-sm-6">
-                <div class="product-card p-sm-3 p-2">
-                    <div class="pro-img-box text-center">
-                        <img class="img-fluid" src="assets/images/sofa.png" alt="product-image">
-                    </div>
-                    <div class="pro-body d-flex flex-column gap-2 mb-3">
-                        <h5 class="m-0">Easy Sofa</h5>
-                        <p class="m-0 ">Price : ₹15000</p>
-                    </div>
-                    <div class="action-btns d-flex justify-content-between flex-column flex-xl-row gap-3">
-                        <button class="default-btn cart-btn text-center w-100">Add to cart</button>
-                        <button class="buy-now-btn  w-100">Buy Now</button>
-                    </div>
-                </div>
+        <div class="row g-4 product-container"> </div>
+    </section>
+
+    <!-- cart box here -->
+    <div class="cart-box d-flex flex-column justify-content-between p-3 position-fixed d-none">
+        <div class="card-wrapper">
+            <div class="d-flex justify-content-between align-items-center border-bottom pb-3">
+                <h5 class="m-0">My shopping Cart</h5>
+                <p class="text-dark m-0 fs-5">&#88;</p>
             </div>
-            <div class="col-lg-4 col-sm-6">
-                <div class="product-card p-sm-3 p-2">
-                    <div class="pro-img-box text-center">
-                        <img class="img-fluid" src="assets/images/sofa.png" alt="product-image">
+
+            <!-- items-starts here -->
+            <div class="cart-items mt-3">
+                <div class="row align-items-center">
+                    <div class="col-4">
+                        <img class="img-fluid" src="assets/images/bed.png" alt="">
                     </div>
-                    <div class="pro-body d-flex flex-column gap-2 mb-3">
-                        <h5 class="m-0">Easy Sofa</h5>
-                        <p class="m-0">Price : ₹15000</p>
-                    </div>
-                    <div class="action-btns d-flex justify-content-between flex-column flex-xl-row gap-3">
-                        <button class="default-btn cart-btn text-center w-100">Add to cart</button>
-                        <button class="buy-now-btn  w-100">Buy Now</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <div class="product-card p-sm-3 p-2">
-                    <div class="pro-img-box text-center">
-                        <img class="img-fluid" src="assets/images/sofa.png" alt="product-image">
-                    </div>
-                    <div class="pro-body d-flex flex-column gap-2 mb-3">
-                        <h5 class="m-0">Easy Sofa</h5>
-                        <p class="m-0">Price : ₹15000</p>
-                    </div>
-                    <div class="action-btns d-flex justify-content-between flex-column flex-xl-row gap-3">
-                        <button class="default-btn cart-btn text-center w-100">Add to cart</button>
-                        <button class="buy-now-btn  w-100">Buy Now</button>
+                    <div class="col-8">
+                        <h6>Bed</h6>
+                        <p>₹20000</p>
+                        <div class="quantity-btns bg-grey text-center fw-bold">
+                            <div class="row justify-content-between align-items-center">
+                                <div class="col-4">
+                                    <button class="btn text-white bg-grey">+</button>
+                                </div>
+                                <div class="col-4">
+                                    <small>0</small>
+                                </div>
+                                <div class="col-4">
+                                    <button class="btn text-white bg-grey">-</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+
+
+        <!-- checkout section here -->
+        <div class="cart-footer row mb-3">
+            <div class="col-6">
+                <p class="m-0 text-start text-dark">Subtotal</p>
+            </div>
+            <div class="col-6">
+                <p class="m-0 text-end text-dark">₹20000</p>
+            </div>
+            <button class="default-btn mt-3">Checkout</button>
+        </div>
+    </div>
+
 
     <!-- subscribe area -->
     <section class="container text-center my-5">
@@ -171,7 +174,8 @@
                 <h1 class="fw-bolder display-4">grab 30% OFF</h1>
                 <div class="row g-3 align-items-center mt-3">
                     <div class="col-sm-8">
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your Email">
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                            placeholder="Enter Your Email">
                     </div>
 
                     <div class="col-sm-4">
@@ -181,6 +185,11 @@
             </div>
         </div>
     </section>
+
+        <!-- cart btn -->
+    <div class="cart-btn-icon p-4 position-fixed">
+        <i class="fi fi-rs-shopping-cart fs-4 d-flex justify-content-center align-items-center"></i>
+    </div>
 
 
     <!-- bs5 js here -->
