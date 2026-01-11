@@ -59,11 +59,11 @@
     <!-- mobile navbar -->
     <div class="mobile-navbar">
         <ul class="mob-nav text-center p-0 gap-2">
-            <li class="text-end close-btn d-flex align-items-center" style="cursor: pointer;">
+            <li class="text-end  d-flex align-items-center" style="cursor: pointer;">
                 <a class="navbar-brand" href="index.html">
                     <img class="img-fluid" src="assets/images/logo.png" alt="brand-logo here">
                 </a>
-                <p class="text-dark m-0 fs-2">&#88;</p>
+                <p class="text-dark close-btn m-0 fs-2">&#88;</p>
             </li>
             <li class="mob-nav-item">
                 <a href="mob-nav-link">Products</a>
@@ -118,50 +118,54 @@
     </section>
 
     <!-- cart box here -->
-    <div class="cart-box d-flex flex-column justify-content-between p-3 position-fixed d-none">
-        <div class="card-wrapper">
-            <div class="d-flex justify-content-between align-items-center border-bottom pb-3">
-                <h5 class="m-0">My shopping Cart</h5>
-                <p class="text-dark m-0 fs-5">&#88;</p>
-            </div>
+    <div class="cart-box-wrapper">
+        <div class="cart-box d-flex flex-column justify-content-between p-3 position-fixed">
+            <div class="card-wrapper">
+                <div class="d-flex justify-content-between align-items-center border-bottom pb-3">
+                    <h5 class="m-0">My shopping Cart</h5>
+                    <p class="text-dark cartbox-close-btn m-0 fs-5" style="cursor: pointer;">&#88;</p>
+                </div>
 
-            <!-- items-starts here -->
-            <div class="cart-items mt-3">
-                <div class="row align-items-center">
-                    <div class="col-4">
-                        <img class="img-fluid" src="assets/images/bed.png" alt="">
-                    </div>
-                    <div class="col-8">
-                        <h6>Bed</h6>
-                        <p>₹20000</p>
-                        <div class="quantity-btns bg-grey text-center fw-bold">
-                            <div class="row justify-content-between align-items-center">
-                                <div class="col-4">
-                                    <button class="btn text-white bg-grey">+</button>
-                                </div>
-                                <div class="col-4">
-                                    <small>0</small>
-                                </div>
-                                <div class="col-4">
-                                    <button class="btn text-white bg-grey">-</button>
+                <!-- items-starts here -->
+                <div class="cart-items-wrapper">
+                    <!-- <div class="cart-items mt-3">
+                        <div class="row align-items-center">
+                            <div class="col-4">
+                                <img class="img-fluid" src="assets/images/bed.png" alt="">
+                            </div>
+                            <div class="col-8">
+                                <h6>Bed</h6>
+                                <p>₹20000</p>
+                                <div class="quantity-btns bg-grey text-center fw-bold">
+                                    <div class="row justify-content-between align-items-center">
+                                        <div class="col-4">
+                                            <button class="btn text-white bg-grey">+</button>
+                                        </div>
+                                        <div class="col-4">
+                                            <small>0</small>
+                                        </div>
+                                        <div class="col-4">
+                                            <button class="btn text-white bg-grey">-</button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
-            </div>
-        </div>
 
-
-        <!-- checkout section here -->
-        <div class="cart-footer row mb-3">
-            <div class="col-6">
-                <p class="m-0 text-start text-dark">Subtotal</p>
             </div>
-            <div class="col-6">
-                <p class="m-0 text-end text-dark">₹20000</p>
+            
+            <!-- checkout section here -->
+            <div class="cart-footer row mb-3">
+                <div class="col-6">
+                    <p class="m-0 text-start text-dark">Subtotal</p>
+                </div>
+                <div class="col-6">
+                    <p class="m-0 total-price text-end text-dark">₹0</p>
+                </div>
+                <button class="default-btn mt-3">Checkout</button>
             </div>
-            <button class="default-btn mt-3">Checkout</button>
         </div>
     </div>
 
@@ -186,9 +190,10 @@
         </div>
     </section>
 
-        <!-- cart btn -->
-    <div class="cart-btn-icon p-4 position-fixed">
+    <!-- cart btn -->
+    <div class="view-cart p-4 position-fixed">
         <i class="fi fi-rs-shopping-cart fs-4 d-flex justify-content-center align-items-center"></i>
+        <span class="cart-counter px-3 py-2 d-flex justify-content-center align-items-center position-absolute">0</span>
     </div>
 
 

@@ -187,13 +187,27 @@ input{
     right: 0;
     width: 300px;
 }
+.cart-box-wrapper{
+ display: none;
+}
+.cart-box-wrapper.active{
+   display: block;
+}
 
-.cart-btn-icon{
-    right: 2rem;
+.view-cart{
+    right: 20rem;
     bottom: 3rem;
     background-color: var(--dark);
     color: var(--white);
     border-radius: 50%;
     z-index: 999;
     cursor: pointer;
+}
+
+.cart-counter{
+    top: 0;
+    right: 0;
+    background-color: var(--dark);
+    border-radius: 50%;
+    transform: translateX(25%) translateY(-25%);
 }
