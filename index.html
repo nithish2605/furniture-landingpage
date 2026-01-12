@@ -20,7 +20,7 @@
 <body>
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-light text-grey pt-lg-5 pt-3">
-        <div class="container-md align-items-center">
+        <div class="container-lg align-items-center">
             <a class="navbar-brand" href="index.html">
                 <img class="img-fluid" src="assets/images/logo.png" alt="brand-logo here">
             </a>
@@ -30,17 +30,17 @@
             <div class="collapse navbar-collapse  justify-content-lg-center">
                 <ul class="navbar-nav gap-3 fs-6 mb-2 mb-lg-0 fw-bold">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">Products</a>
+                        <a class="nav-link" aria-current="page" href="#products">Products</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About Us</a>
+                        <a class="nav-link" href="#about-us">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Our Store</a>
+                        <a class="nav-link" href="#products">Our Store</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Delivery</a>
+                        <a class="nav-link" href="#products">Delivery</a>
                     </li>
                 </ul>
             </div>
@@ -66,34 +66,34 @@
                 <p class="text-dark close-btn m-0 fs-2">&#88;</p>
             </li>
             <li class="mob-nav-item">
-                <a href="mob-nav-link">Products</a>
+                <a href="#products" class="mob-nav-link">Products</a>
             </li>
             <li class="mob-nav-item">
-                <a href="mob-nav-link">About Us</a>
+                <a href="#about-us" class="mob-nav-link">About Us</a>
             </li>
             <li class="mob-nav-item">
-                <a href="mob-nav-link">Our Store</a>
+                <a href="#products" class="mob-nav-link">Our Store</a>
             </li>
             <li class="mob-nav-item">
-                <a href="mob-nav-link">Delivery</a>
+                <a href="#products" class="mob-nav-link">Delivery</a>
             </li>
             <li class="mob-nav-item">
-                <a href="mob-nav-link">Login/SignUp</a>
+                <a href="" class="mob-nav-link">Login/SignUp</a>
             </li>
         </ul>
     </div>
 
 
     <!-- hero section -->
-    <section class="hero-section container-md mt-3">
+    <section class="hero-section container-lg mt-3">
         <div class="hero-content text-center">
-            <h1 class="fw-bold mb-5 display-4">Transform Space with Sustaible Furniture</h1>
+            <h1 class="fw-bold mb-4 display-4">Transform Space with Sustaible Furniture</h1>
             <button class="default-btn hero-btn  px-4 py-3 ">Shop Now</button>
         </div>
     </section>
 
     <!-- Numbers section -->
-    <section class="container-md text-center  mt-5 pb-md-5 pt-sm-4">
+    <section class="container-lg text-center  mt-5 pb-md-5 pt-sm-4">
         <div class="row g-3 g-sm-0 justify-content-between">
             <div class="col-sm-4 col-md-3 col-12">
                 <h1 class="display-3 fw-bold ">18K+</h1>
@@ -112,50 +112,23 @@
 
 
     <!-- products area here -->
-    <section class="products-section container-md my-5 pb-sm-5">
+    <section class="products-section container-lg my-5 pb-sm-5" id="products">
         <h1 class="fw-bold text-center my-5 display-3">Our Best Quality Products</h1>
         <div class="row g-4 product-container"> </div>
     </section>
 
     <!-- cart box here -->
-    <div class="cart-box-wrapper">
-        <div class="cart-box d-flex flex-column justify-content-between p-3 position-fixed">
+    <div class="cart-box-wrapper position-fixed">
+        <div class="cart-box d-flex flex-column justify-content-between p-3">
             <div class="card-wrapper">
                 <div class="d-flex justify-content-between align-items-center border-bottom pb-3">
                     <h5 class="m-0">My shopping Cart</h5>
                     <p class="text-dark cartbox-close-btn m-0 fs-5" style="cursor: pointer;">&#88;</p>
                 </div>
-
                 <!-- items-starts here -->
-                <div class="cart-items-wrapper">
-                    <!-- <div class="cart-items mt-3">
-                        <div class="row align-items-center">
-                            <div class="col-4">
-                                <img class="img-fluid" src="assets/images/bed.png" alt="">
-                            </div>
-                            <div class="col-8">
-                                <h6>Bed</h6>
-                                <p>₹20000</p>
-                                <div class="quantity-btns bg-grey text-center fw-bold">
-                                    <div class="row justify-content-between align-items-center">
-                                        <div class="col-4">
-                                            <button class="btn text-white bg-grey">+</button>
-                                        </div>
-                                        <div class="col-4">
-                                            <small>0</small>
-                                        </div>
-                                        <div class="col-4">
-                                            <button class="btn text-white bg-grey">-</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
-                </div>
-
+                <div class="cart-items-wrapper"></div>
             </div>
-            
+
             <!-- checkout section here -->
             <div class="cart-footer row mb-3">
                 <div class="col-6">
@@ -196,6 +169,46 @@
         <span class="cart-counter px-3 py-2 d-flex justify-content-center align-items-center position-absolute">0</span>
     </div>
 
+    <!-- footer here -->
+    <footer class="bg-dark text-grey" id="about-us">
+        <div class="container">
+            <div class="row g-3 ms-1 ms-sm-0 align-items-center py-5 border-bottom">
+                <div class="col-lg-2 col-md-3 col-sm-6">
+                    <ul class="list-unstyled">
+                        <h5 class="text-white fw-bold mb-md-4">Service</h5>
+                        <li class="fs-6 mb-2">Legal notice</li>
+                        <li class="fs-6">Data Protection</li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-6">
+                    <ul class="list-unstyled">
+                        <h5 class="text-white fw-bold mb-md-4">Newsletter</h5>
+                        <li class="fs-6 mb-2">Enter Email Address</li>
+                        <li class="fs-6">Sign Up</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-sm-6 text-md-center order-first order-md-0 mb-4">
+                    <img class="img-fluid" src="assets/images/logo.png" alt="logo-here">
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-6">
+                    <ul class="list-unstyled">
+                        <h5 class="text-white fw-bold mb-md-4">Connect</h5>
+                        <li class="fs-6 mb-2">Instagram</li>
+                        <li class="fs-6">Facebook</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6">
+                    <ul class="list-unstyled">
+                        <h5 class="text-white fw-bold mb-md-4">Contact</h5>
+                        <li class="fs-6 mb-2">+6152658548</li>
+                        <li class="fs-6">modulive@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="py-4 fw-normal mb-0"><span class="pe-2">&#169;</span>Copyright 2026.Modulive All Rights Reserved.
+            </p>
+        </div>
+    </footer>
 
     <!-- bs5 js here -->
     <script src="assets/js/bootstrap.min.js"></script>

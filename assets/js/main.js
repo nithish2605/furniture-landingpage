@@ -6,37 +6,14 @@ let product_box = document.querySelector('.product-container');
 let view_Cart = document.querySelector('.view-cart');
 let cart_box = document.querySelector('.cart-box-wrapper');
 let total_price = document.querySelector('.total-price');
-
-//products array
-let products = [
-  {
-    id: '1',
-    proname: 'sofa',
-    price: '1200',
-    path: 'assets/images/sofa.png',
-  },
-  {
-    id: '2',
-    proname: 'bed',
-    price: '18000',
-    path: 'assets/images/bed.png',
-  },
-  {
-    id: '3',
-    proname: 'dressing table',
-    price: '20000',
-    path: 'assets/images/dressing table.png',
-  }
-];
-
-let cart_items = [];
-
+let mob_nav_links =document.querySelectorAll('.mob-nav-link');
 
 //opening mob navbar
 menu_bar.addEventListener('click', openMenu);
 //closing the mob navbar
 document.querySelector('.close-btn').addEventListener('click', closeMenu);
 navbackdrop.addEventListener('click', closeMenu);
+mob_nav_links.forEach(m => m.addEventListener('click',closeMenu));
 
 function openMenu() {
   mobile_navbar.classList.add('active');
@@ -48,7 +25,32 @@ function closeMenu() {
   navbackdrop.classList.remove('active');
 }
 
-//to display prodcuts array
+//products 
+let products = [
+  {
+    id: '1',
+    proname: 'sofa',
+    price: '15000',
+    path: 'assets/images/sofa.png',
+  },
+  {
+    id: '2',
+    proname: 'bed',
+    price: '16600',
+    path: 'assets/images/bed.png',
+  },
+  {
+    id: '3',
+    proname: 'dressing table',
+    price: '18000',
+    path: 'assets/images/dressing table.png',
+  }
+];
+
+//To store adding products
+let cart_items = [];
+
+//To display prodcuts array
 products.forEach(p => {
   product_box.innerHTML += `<div class="col-lg-4 col-sm-6">
                 <div class="product-card p-sm-3 p-2">
@@ -79,6 +81,7 @@ add_cart_btns.forEach(c => {
 //view cart
 view_Cart.addEventListener('click', () => {
   cart_box.classList.add('active');
+  renderCartItems();
 });
 
 //close cart box
@@ -108,13 +111,19 @@ function addToCart(c) {
       });
     }
     renderCartItems();
-  });
+  }); 
 }
 
 // function to render cart items
 function renderCartItems() {
   cart_items_wrapper.innerHTML = "";
   cart_counter.innerText = increase_counter;
+
+  if (cart_items.length == 0)
+    return cart_items_wrapper.innerHTML += `
+  <h4 class="mt-3 text-center">Your Cart is empty</h4>
+  <p class="text-center">Add products to checkout !</p>`;
+
   cart_items.forEach(c => {
     cart_items_wrapper.innerHTML += `
   <div class="cart-items mt-3">
@@ -146,7 +155,6 @@ function renderCartItems() {
   total_price.innerText = cart_items.reduce((sum, item) => {
     return sum + (item.price * item.qty);
   }, 0);
-
 }
 
 cart_items_wrapper.addEventListener('click', (e) => {
@@ -172,9 +180,9 @@ cart_items_wrapper.addEventListener('click', (e) => {
       cart_counter.innerText = increase_counter--;
       if (dec_curr_Item.qty <= 0) {
         cart_items = cart_items.filter(i => i.id != itemId);
+        total_price.innerText = 0;
       }
     }
   }
-
   renderCartItems();
 })
